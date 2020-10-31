@@ -14,7 +14,7 @@
           <td><input type="password" v-model="password"/></td>
         </tr>
       </table>
-      <button @click="signUp">登録</button>
+       <button @click="signUp">登録</button>
   </div>
 </template>
 
@@ -24,7 +24,9 @@ export default {
     signUp: function () {
       firebase.auth().createUserWithEmailAndPassword(this.mailaddress, this.password)
       .then(
-        // 成功時の処理
+        then(() => {
+          this.$router.push("/Signin");
+        })
       )
       .catch(
         // エラー時の処理 

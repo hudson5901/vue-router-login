@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Signin from '@/components/Signin'
+import Signup from '@/components/Signup'
 import a from '@/components/a'
 
 Vue.use(Router)
@@ -19,6 +20,12 @@ const router = new Router({
       path: '/Signin',
       name: 'Signin',
       component: Signin,
+      meta: { requiresAuth: false }
+    },
+    {
+      path: '/Signup',
+      name: 'Signup',
+      component: Signup,
       meta: { requiresAuth: false }
     },
     {

@@ -26,10 +26,10 @@ export default {
   methods: {
     login: function () {
       firebase.auth().signInWithEmailAndPassword(this.mailaddress, this.password)
-      .then(
-        // 成功時の処理
-        alert('Success!')
-      )
+      .then(() => {
+          this.$router.push("/a");
+          alert("ログイン成功!");
+        })
       .catch(
         // エラー時の処理 
       )

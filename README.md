@@ -1,4 +1,7 @@
-# maillllllll
+# Vue-router-login
+
+ログインしないと見れないようにするページが作りたいです
+main.jsのFirebaseのAPIを打つ部分は怖かったので消しました。
 
 > A Vue.js project
 
